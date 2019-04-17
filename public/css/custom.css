@@ -1,0 +1,98 @@
+.btn-block {
+  width: 100%;
+}
+body{
+  font-family: "Raleway", sans-serif;
+}
+.btn-navy{
+
+	background-color: #3385c6 !important;
+
+}
+.btn-soviet{
+
+	background-color: #dc2829 !important;
+
+}
+.btn-submarine{
+	background-color: #e2af49 !important;
+}
+.text-soviet{
+
+	color: #dc2829 !important;
+
+}
+.modal, .modal-footer{
+
+	background-color: white !important;
+
+}
+
+.modal{
+
+	max-height: 80% !important;
+
+}
+.text-display{
+
+	border-bottom: 1px solid #212121 !important;
+	color: #212121 !important;
+
+}
+.text-display-borderless{
+
+	border-bottom: 0px solid #212121 !important;
+	color: #212121 !important;
+
+}
+.label-display{
+
+	color: #212121 !important;
+
+}
+.dropdown-content li>a, .dropdown-content li>span{
+
+	color: #3385c6 !important;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	.sm-hide{
+
+		display: none;
+
+	}
+	.sm-show{
+
+		display: block;
+
+	}
+	.sm-font{
+
+		font-size: 20px !important;
+
+	}
+
+}
+@media only screen and (min-width: 601px) {
+
+	.sm-hide{
+
+		display: block;
+
+	}
+	.sm-show{
+
+		display: none;
+
+	}
+
+}
+
+#sidenav-overlay{
+
+    z-index: 2 !important;
+
+}

@@ -1,0 +1,177 @@
+
+Missing information and concern in each page.
+Please fived the website it almost Done:
+
+_________________________
+	Twilio Accout
+Please enable twilio Account.
+
+_________________
+	 About us
+Online keycodes is a trusted provider of keycodes for all professional  locksmiths and mechanic companies for few years. Our key codes have been used all over the world. 
+All makes and models are available
+.
+As a premier provider of keycodes world wide, we take pride for your security and offer fast reliable response time for all queries and orders.
+
+
+_________________________
+ 
+	View list page
+- Its silver, Gold and Platinum.
+But when we  click the view list it will show Level 1 instead of Silver, level 2 instead of Gold and Level 3 instead of Platinum. Please check.
+
+= Please check logo's for 5 digit BCM and 20 digit BCM, its look like magic key code logo. we need a different Logo. 
+
+= Too many logo's please triple check. 
+____________________________
+
+This makes should be in all  rank.
+	Silver:
+ =6 digit Mazda incode / out code
+=Mazda serial Pincode- $
+=  5 Digit BCM- Free
+=20 Digit BCM- $10
+
+
+	Gold
+= Mazda 2013 + incode / outcode = $35
+=6 digit Mazda incode / out code- $5
+=Mazda serial Pincode- $5
+=  5 Digit BCM- Free
+=20 Digit BCM- $10
+
+	Platinum
+= Mazda 2013 + incode / outcode = $35
+=6 digit Mazda incode / out code
+=Mazda serial Pincode- $
+=  5 Digit BCM- Free
+=20 Digit BCM- $10
+_______________
+ 	Silver 
+  Need to upload the file.
+=(FOR ISUZU PLEASE SEND: PICTURE OF REGISTRATION OR TITLE +PICTURE OF DRIVING LICENSE - NAMES HAVE TOMATCH - MONDAY - FRIDAY 10AM-5PM EST - UP TO 24 HOURS)
+____________________
+
+Required Details
+= When customer wanted  to upgrade to  gold, there should be a small  a pop icon, that show's an example on how write the phone number. (like faded)
+_________________
+	 REMINDERS
+Customer  in Silver rank and wanted upgrade to Gold rank but didn't verify  his phone number yet.  Make sure that can still use his Silver rank.
+__________________
+ Registration Verification
+- Just in case customer never receive the verification sms, make sure that there is a pop up icon to resend the verification code with in a couple of minutes. 
+_______________________
+=All pop up icon still NO X option to exit.
+= Please change sounds notification, please make it more cathcy.  (Para makadungig mi and dili mi katulog)
+= History page need to refresh automatilly every seconds.
+
+_______________________
+  Profile
+Option on how to receive the result , (Sms, email, history page, all of the above)
+Please put this on the top profile page
+____________________
+  History page
+= Make sure that every customer have their own History page.
+= Make sure that  admin have their own history page for all the vin and the result that has been  ran from Online key codes. ( Dapat magsync ang History sa customer kay online once iclick ang history)
+
+= Nastf ( Password and Lsid)  and Credit Card info need to be ******** in customer control panel. but admin can see  all the info in the customer control panel.
+= Admin should have the option to control all customer's profile and we can change whatever we want to change..
+	 Admin can control everything.
+____________
+ Credit card and nastf explaination:
+= Should be like this ********** in customer Control panel, but when customer will click edit he will see all the original Details and will be able to change or Modifiy. 
+____________________
+Sign Up page
+Personal Details
+	Need to have Spaces:
+		First Name
+		Middle Name
+		Last Name
+_______________________
+ Card Details
+ =Card Number- Need to type the card details
+	Note:  Delete the Drop Down Arrow.
+______________
+
+= Add Term And Conditions
+
+_________________
+The Website still show "not secure" for some reason it needs to be fix.
+_______________________
+Car Make Logos
+- Still too many logos and no price for them
+_______________
+Need to add Chat Box for customers inquiries/ Complaints. There should be a pop icon for all customer chats.
+=Sounds for code request, still the same.
+	Please check and improve.
+
+Ann
+Case from matan:
+ He change his profile to get the code from SMS and email. but he never receive email and sms. maybe because he is in Silver rank and he did not add phone number. but he never receive any email too.. Please check this case.
+
+
+_________________
+ Profile Page Password
+ - Its Good that it is ......... this is the right way to show in the profile.  but  need to have a box to click  show password.
+
+ Example: Nagtry si customer 3 times, Human Mali. pero  dapat naay box to click like "show password".
+
+_______________
+	 
+	Profile
+He is in Gold, but in his proces still show silver. 
+please check
+
+= Profile page  need to be 100% vesible in one page.
+	75% lang ang makita and No option to scroll down. Please check.
+
+_______________
+ Message preference
+- Both
+-Both
+-Email
+-Sms
+____________
+After he click save, still show save button. 
+- he saved  and he want to edit  again, the edit button change to save and not change back to edit after you click save. 
+ - sa bisaya, humana siya ug save, ngannung wala nibalik into edit button.. unsaon niya pag edit na save naman ang nakabutang. 
+ Please check.
+____________________-
+Purchase details
+Ngannung Loading kaayo
+- Stucks even when he try few times.
+- No X to exit
+__________
+	Platinum rank
+ Driver's license, Locksmith License and Business License.  Okay na, Pero Ang EIN OR SSN dili ni siya picture, itype lang.
+________________
+	Upgrade to  each rank
+Change the Pop up message:
+	"Your Details are being Verified, Please wait up to 24 hrs.  You can still use your Silver rank until you will receive a notification approval.
+__________________
+Palitinum aproval
+
+- Option for response: Asa ang option ni customer para makadawat siya sa atuang reply? SMS , EMAIL,,History page or Both..
+- in some cases we need to  to provide a reason
+
+= Dapat naay option to aprove or decline
+= Most Important: Asa ang option na madownlaod ang file padulong sa pc.
+ = Please check Dili mo decline and Mo approve and site. double check ang video. Kay based sa video need pa iclick ug 5 times.
+= Kailangan natu mag send ug message ngannu sila na decline and if na aprove sila need pud natu mag send ug notification like, Welcome to online keycode, you can now use your account now.......
+
+___________________-
+ 	Profile
+Change level 1 to Silver, Level 2- Gold and Level 3- Platinum.
+_____________________________-
+		Order Details
+Change level 1 to Silver, Level 2- Gold and Level 3- Platinum.
+___________________
+ Level 3 Upgrade
+ Asa ang Notification that files are succesfully uploaded? wla nagashow sa page  nga na upload na iyahang files
+
+________________
+	 Terms and Condition
+- Please add
+__________
+Platinum
+- Need phone verifcation bago ang option  to upload sa mga docs..

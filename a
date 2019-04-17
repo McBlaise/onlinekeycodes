@@ -1,0 +1,392 @@
+UPDATE-ENVIRONMENT()                                      UPDATE-ENVIRONMENT()
+
+
+
+NNAAMMEE
+       update-environment -
+
+DDEESSCCRRIIPPTTIIOONN
+       Updates the environment description, deploys a new application version,
+       updates the configuration settings to  an  entirely  new  configuration
+       template,  or updates select configuration option values in the running
+       environment.
+
+       Attempting to update both the release and configuration is not  allowed
+       and AWS Elastic Beanstalk returns an IInnvvaalliiddPPaarraammeetteerrCCoommbbiinnaattiioonn error.
+
+       When  updating the configuration settings to a new template or individ-
+       ual settings, a draft configuration is created and  describe-configura-
+       tion-settings  for  this  environment  returns two setting descriptions
+       with different DDeeppllooyymmeennttSSttaattuuss values.
+
+SSYYNNOOPPSSIISS
+            update-environment
+          [--application-name <value>]
+          [--environment-id <value>]
+          [--environment-name <value>]
+          [--group-name <value>]
+          [--description <value>]
+          [--tier <value>]
+          [--version-label <value>]
+          [--template-name <value>]
+          [--solution-stack-name <value>]
+          [--option-settings <value>]
+          [--options-to-remove <value>]
+          [--cli-input-json <value>]
+          [--generate-cli-skeleton]
+
+OOPPTTIIOONNSS
+       ----aapppplliiccaattiioonn--nnaammee (string)
+          The name of the application with which the  environment  is  associ-
+          ated.
+
+       ----eennvviirroonnmmeenntt--iidd (string)
+          The ID of the environment to update.
+
+          If no environment with this ID exists, AWS Elastic Beanstalk returns
+          an IInnvvaalliiddPPaarraammeetteerrVVaalluuee error.
+
+          Condition: You must specify either this or  an  EnvironmentName,  or
+          both.  If  you  do not specify either, AWS Elastic Beanstalk returns
+          MMiissssiinnggRReeqquuiirreeddPPaarraammeetteerr error.
+
+       ----eennvviirroonnmmeenntt--nnaammee (string)
+          The name of the environment to update. If no environment  with  this
+          name  exists, AWS Elastic Beanstalk returns an IInnvvaalliiddPPaarraammeetteerrVVaalluuee
+          error.
+
+          Condition: You must specify either  this  or  an  EnvironmentId,  or
+          both.  If  you  do not specify either, AWS Elastic Beanstalk returns
+          MMiissssiinnggRReeqquuiirreeddPPaarraammeetteerr error.
+
+       ----ggrroouupp--nnaammee (string)
+          The name of the group to which the target environment belongs. Spec-
+          ify  a  group name only if the environment's name is specified in an
+          environment manifest and not with the environment name  or  environ-
+          ment ID parameters. See _E_n_v_i_r_o_n_m_e_n_t _M_a_n_i_f_e_s_t _(_e_n_v_._y_a_m_l_) for details.
+
+       ----ddeessccrriippttiioonn (string)
+          If  this  parameter  is specified, AWS Elastic Beanstalk updates the
+          description of this environment.
+
+       ----ttiieerr (structure)
+          This specifies the tier to use to update the environment.
+
+          Condition: At this time, if you change the tier  version,  name,  or
+          type, AWS Elastic Beanstalk returns IInnvvaalliiddPPaarraammeetteerrVVaalluuee error.
+
+       Shorthand Syntax:
+
+          Name=string,Type=string,Version=string
+
+       JSON Syntax:
+
+          {
+            "Name": "string",
+            "Type": "string",
+            "Version": "string"
+          }
+
+       ----vveerrssiioonn--llaabbeell (string)
+          If  this  parameter  is specified, AWS Elastic Beanstalk deploys the
+          named application version to the environment. If no such application
+          version is found, returns an IInnvvaalliiddPPaarraammeetteerrVVaalluuee error.
+
+       ----tteemmppllaattee--nnaammee (string)
+          If  this  parameter is specified, AWS Elastic Beanstalk deploys this
+          configuration template to the environment. If no such  configuration
+          template  is  found, AWS Elastic Beanstalk returns an IInnvvaalliiddPPaarraammee--
+          tteerrVVaalluuee error.
+
+       ----ssoolluuttiioonn--ssttaacckk--nnaammee (string)
+          This specifies the platform version that the  environment  will  run
+          after the environment is updated.
+
+       ----ooppttiioonn--sseettttiinnggss (list)
+          If  specified,  AWS  Elastic Beanstalk updates the configuration set
+          associated with the running environment and sets the specified  con-
+          figuration options to the requested value.
+
+       Shorthand Syntax:
+
+          ResourceName=string,Namespace=string,OptionName=string,Value=string ...
+
+       JSON Syntax:
+
+          [
+            {
+              "ResourceName": "string",
+              "Namespace": "string",
+              "OptionName": "string",
+              "Value": "string"
+            }
+            ...
+          ]
+
+       ----ooppttiioonnss--ttoo--rreemmoovvee (list)
+          A  list  of custom user-defined configuration options to remove from
+          the configuration set for this environment.
+
+       Shorthand Syntax:
+
+          ResourceName=string,Namespace=string,OptionName=string ...
+
+       JSON Syntax:
+
+          [
+            {
+              "ResourceName": "string",
+              "Namespace": "string",
+              "OptionName": "string"
+            }
+            ...
+          ]
+
+       ----ccllii--iinnppuutt--jjssoonn (string) Performs service operation based on the  JSON
+       string  provided. The JSON string follows the format provided by ----ggeenn--
+       eerraattee--ccllii--sskkeelleettoonn. If other arguments  are  provided  on  the  command
+       line, the CLI values will override the JSON-provided values.
+
+       ----ggeenneerraattee--ccllii--sskkeelleettoonn  (boolean)  Prints a sample input JSON to stan-
+       dard output. Note the specified operation is not run if  this  argument
+       is  specified.  The  sample  input  can  be  used  as  an  argument for
+       ----ccllii--iinnppuutt--jjssoonn.
+
+EEXXAAMMPPLLEESS
+       TToo uuppddaattee aann eennvviirroonnmmeenntt ttoo aa nneeww vveerrssiioonn
+
+       The following command updates an environment named "my-env" to  version
+       "v2" of the application to which it belongs:
+
+          aws elasticbeanstalk update-environment --environment-name my-env --version-label v2
+
+       This  command requires that the "my-env" environment already exists and
+       belongs to an application that has a valid application version with the
+       label "v2".
+
+       Output:
+
+          {
+            "ApplicationName": "my-app",
+            "EnvironmentName": "my-env",
+            "VersionLabel": "v2",
+            "Status": "Updating",
+            "EnvironmentId": "e-szqipays4h",
+            "EndpointURL": "awseb-e-i-AWSEBLoa-1RDLX6TC9VUAO-0123456789.us-west-2.elb.amazonaws.com",
+            "SolutionStackName": "64bit Amazon Linux running Tomcat 7",
+            "CNAME": "my-env.elasticbeanstalk.com",
+            "Health": "Grey",
+            "Tier": {
+                "Version": " ",
+                "Type": "Standard",
+                "Name": "WebServer"
+            },
+            "DateUpdated": "2015-02-03T23:12:29.119Z",
+            "DateCreated": "2015-02-03T23:04:54.453Z"
+          }
+
+       TToo sseett aann eennvviirroonnmmeenntt vvaarriiaabbllee
+
+       The  following  command  sets the value of the "PARAM1" variable in the
+       "my-env" environment to "ParamValue":
+
+          aws elasticbeanstalk update-environment --environment-name my-env --option-settings Namespace=aws:elasticbeanstalk:application:environment,OptionName=PARAM1,Value=ParamValue
+
+       The ooppttiioonn--sseettttiinnggss parameter takes a namespace in addition to the name
+       and  value  of  the variable. Elastic Beanstalk supports several names-
+       paces for options in addition to environment variables.
+
+       TToo ccoonnffiigguurree ooppttiioonn sseettttiinnggss ffrroomm aa ffiillee
+
+       The following command configures several options in  the  aawwss::eellbb::llooaadd--
+       bbaallaanncceerr namespace from a file:
+
+          aws elasticbeanstalk update-environment --environment-name my-env --option-settings file://options.json
+
+       ooppttiioonnss..jjssoonn is a JSON object defining several settings:
+
+          [
+            {
+              "Namespace": "aws:elb:healthcheck",
+              "OptionName": "Interval",
+              "Value": "15"
+            },
+            {
+              "Namespace": "aws:elb:healthcheck",
+              "OptionName": "Timeout",
+              "Value": "8"
+            },
+            {
+              "Namespace": "aws:elb:healthcheck",
+              "OptionName": "HealthyThreshold",
+              "Value": "2"
+            },
+            {
+              "Namespace": "aws:elb:healthcheck",
+              "OptionName": "UnhealthyThreshold",
+              "Value": "3"
+            }
+          ]
+
+       Output:
+
+          {
+              "ApplicationName": "my-app",
+              "EnvironmentName": "my-env",
+              "VersionLabel": "7f58-stage-150812_025409",
+              "Status": "Updating",
+              "EnvironmentId": "e-wtp2rpqsej",
+              "EndpointURL": "awseb-e-w-AWSEBLoa-14XB83101Q4L-104QXY80921.sa-east-1.elb.amazonaws.com",
+              "SolutionStackName": "64bit Amazon Linux 2015.03 v2.0.0 running Tomcat 8 Java 8",
+              "CNAME": "my-env.elasticbeanstalk.com",
+              "Health": "Grey",
+              "AbortableOperationInProgress": true,
+              "Tier": {
+                  "Version": " ",
+                  "Type": "Standard",
+                  "Name": "WebServer"
+              },
+              "DateUpdated": "2015-08-12T18:15:23.804Z",
+              "DateCreated": "2015-08-07T20:48:49.599Z"
+          }
+
+       For more information about namespaces and supported options, see _O_p_t_i_o_n
+       _V_a_l_u_e_s in the _A_W_S _E_l_a_s_t_i_c _B_e_a_n_s_t_a_l_k _D_e_v_e_l_o_p_e_r _G_u_i_d_e.
+
+OOUUTTPPUUTT
+       EnvironmentName -> (string)
+          The name of this environment.
+
+       EnvironmentId -> (string)
+          The ID of this environment.
+
+       ApplicationName -> (string)
+          The name of the application associated with this environment.
+
+       VersionLabel -> (string)
+          The application version deployed in this environment.
+
+       SolutionStackName -> (string)
+          The name of the SSoolluuttiioonnSSttaacckk deployed with this environment.
+
+       TemplateName -> (string)
+          The name of the configuration template  used  to  originally  launch
+          this environment.
+
+       Description -> (string)
+          Describes this environment.
+
+       EndpointURL -> (string)
+          For load-balanced, autoscaling environments, the URL to the LoadBal-
+          ancer. For single-instance  environments,  the  IP  address  of  the
+          instance.
+
+       CNAME -> (string)
+          The URL to the CNAME for this environment.
+
+       DateCreated -> (timestamp)
+          The creation date for this environment.
+
+       DateUpdated -> (timestamp)
+          The last modified date for this environment.
+
+       Status -> (string)
+          The current operational status of the environment:
+
+          +o LLaauunncchhiinngg : Environment is in the process of initial deployment.
+
+          +o UUppddaattiinngg  : Environment is in the process of updating its configu-
+            ration settings or application version.
+
+          +o RReeaaddyy : Environment is available to have an  action  performed  on
+            it, such as update or terminate.
+
+          +o TTeerrmmiinnaattiinngg : Environment is in the shut-down process.
+
+          +o TTeerrmmiinnaatteedd : Environment is not running.
+
+       AbortableOperationInProgress -> (boolean)
+          Indicates  if  there  is  an  in-progress  environment configuration
+          update or application version deployment that you can cancel.
+              ttrruuee:: There is an update in progress.
+
+              ffaallssee:: There are no updates currently in progress.
+
+       Health -> (string)
+          Describes  the  health  status  of  the  environment.  AWS   Elastic
+          Beanstalk indicates the failure levels for a running environment:
+
+          +o RReedd  :  Indicates  the  environment is not responsive. Occurs when
+            three or more consecutive failures occur for an environment.
+
+          +o YYeellllooww : Indicates that something is wrong. Occurs when  two  con-
+            secutive failures occur for an environment.
+
+          +o GGrreeeenn : Indicates the environment is healthy and fully functional.
+
+          +o GGrreeyy  :  Default  health for a new environment. The environment is
+            not fully launched and health checks have not  started  or  health
+            checks  are suspended during an uuppddaattee--eennvviirroonnmmeenntt or RReessttaarrttEEnnvvii--
+            rroonneemmeenntt request.
+
+          Default: GGrreeyy
+
+       HealthStatus -> (string)
+          Returns the health status of the application running in  your  envi-
+          ronment. For more information, see _H_e_a_l_t_h _C_o_l_o_r_s _a_n_d _S_t_a_t_u_s_e_s .
+
+       Resources -> (structure)
+          The description of the AWS resources used by this environment.
+
+          LoadBalancer -> (structure)
+              Describes the LoadBalancer.
+
+              LoadBalancerName -> (string)
+                 The name of the LoadBalancer.
+
+              Domain -> (string)
+                 The domain name of the LoadBalancer.
+
+              Listeners -> (list)
+                 A list of Listeners used by the LoadBalancer.
+
+                 (structure)
+                     Describes  the  properties of a Listener for the LoadBal-
+                     ancer.
+
+                     Protocol -> (string)
+                        The protocol that is used by the Listener.
+
+                     Port -> (integer)
+                        The port that is used by the Listener.
+
+       Tier -> (structure)
+          Describes the current tier of this environment.
+
+          Name -> (string)
+              The name of this environment tier.
+
+          Type -> (string)
+              The type of this environment tier.
+
+          Version -> (string)
+              The version of this environment tier.
+
+       EnvironmentLinks -> (list)
+          A list of links to other environments in the same group.
+
+          (structure)
+              A link to another environment, defined in the environment's man-
+              ifest. Links provide connection information in system properties
+              that can be used to connect to another environment in  the  same
+              group. See _E_n_v_i_r_o_n_m_e_n_t _M_a_n_i_f_e_s_t _(_e_n_v_._y_a_m_l_) for details.
+
+              LinkName -> (string)
+                 The name of the link.
+
+              EnvironmentName -> (string)
+                 The name of the linked environment (the dependency).
+
+
+
+                                                          UPDATE-ENVIRONMENT()
